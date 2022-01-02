@@ -1,0 +1,26 @@
+2022-01-02 13:46:01,141 INFO [36mo.s.b.w.e.t.TomcatWebServer             [0;39m [main] Tomcat initialized with port(s): 9090 (http)
+2022-01-02 13:46:01,155 INFO [36mo.a.c.h.Http11NioProtocol               [0;39m [main] Initializing ProtocolHandler ["http-nio-9090"]
+2022-01-02 13:46:01,156 INFO [36mo.a.c.c.StandardService                 [0;39m [main] Starting service [Tomcat]
+2022-01-02 13:46:01,157 INFO [36mo.a.c.c.StandardEngine                  [0;39m [main] Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-01-02 13:46:01,244 INFO [36mo.a.c.c.C.[.[.[/]                       [0;39m [main] Initializing Spring embedded WebApplicationContext
+2022-01-02 13:46:01,245 INFO [36mw.s.c.ServletWebServerApplicationContext[0;39m [main] Root WebApplicationContext: initialization completed in 1420 ms
+2022-01-02 13:46:01,278 WARN [36mConfigServletWebServerApplicationContext[0;39m [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'accountController' defined in file [C:\Users\pc\Desktop\bank1\target\classes\com\application\bank1\controller\AccountController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'accountServiceImpl' defined in file [C:\Users\pc\Desktop\bank1\target\classes\com\application\bank1\service\AccountServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.application.bank1.dao.Dao<?>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2022-01-02 13:46:01,280 INFO [36mo.a.c.c.StandardService                 [0;39m [main] Stopping service [Tomcat]
+2022-01-02 13:46:01,295 INFO [36mConditionEvaluationReportLoggingListener[0;39m [main] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-01-02 13:46:01,320 ERROR [36mo.s.b.d.LoggingFailureAnalysisReporter  [0;39m [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.application.bank1.service.AccountServiceImpl required a bean of type 'com.application.bank1.dao.Dao' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.application.bank1.dao.Dao' in your configuration.
+
