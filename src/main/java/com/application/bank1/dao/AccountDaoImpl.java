@@ -3,9 +3,11 @@ package com.application.bank1.dao;
 import com.application.bank1.mapper.AccountRowMapper;
 import com.application.bank1.model.Account;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+@Repository
 public class AccountDaoImpl implements Dao<Account> {
 
     @Override

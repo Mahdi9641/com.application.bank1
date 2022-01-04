@@ -9,13 +9,13 @@ import java.util.List;
  @Service
 public class TransactionServiceImpl implements TransactionService{
 
-    private Dao dao ;
+    private Dao<Transaction> dao ;
 
-     public TransactionServiceImpl(Dao dao) {
+     public TransactionServiceImpl(Dao<Transaction> dao) {
          this.dao = dao;
      }
 
-    @Override
+     @Override
     public List<Transaction> findall() {
         return dao.findall();
     }

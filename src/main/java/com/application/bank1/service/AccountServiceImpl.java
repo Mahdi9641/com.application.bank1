@@ -8,16 +8,16 @@ import java.util.List;
 @Service
 public class AccountServiceImpl implements AccountService{
 
-    private Dao dao;
+   private Dao<Account> accountDao;
 
-    public AccountServiceImpl(Dao dao) {
-        this.dao = dao;
+    public AccountServiceImpl(Dao<Account> accountDao) {
+        this.accountDao = accountDao;
     }
 
     @Override
     public List<Account> findall() {
 
-            return dao.findall();
+            return accountDao.findall();
 
     }
 }
