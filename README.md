@@ -1,1 +1,1 @@
-"# com.application.bank1" 
+"# bank1" 
