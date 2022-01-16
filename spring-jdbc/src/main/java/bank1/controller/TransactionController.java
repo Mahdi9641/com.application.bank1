@@ -26,7 +26,7 @@ public class TransactionController {
     }
 
 
-    @GetMapping("/transaction")
+    @GetMapping("/getTransaction")
     public Transaction gettarnsaction() {
         Transaction returnValue;
         returnValue = new Transaction(12, 12);
@@ -34,9 +34,21 @@ public class TransactionController {
         return returnValue;
 
     }
-    @PostMapping("/transaction")
+    @PostMapping("/createTransaction")
     public void createdtarnsaction(@RequestBody Transaction transaction) {
-        log.info("put all transaction");
-        System.out.println(transaction);
+        log.info("put transaction");
+        transactionService.insert(transaction);
+    }
+
+    @PutMapping("/updateTransaction")
+    public void updateTransaction(@RequestBody Transaction transaction){
+        log.trace("update transaction");
+        transactionService.update(transaction);
+
+    }
+    @DeleteMapping("/deleteTransaction")
+    public void deleteTransaction(@RequestBody Transaction transaction){
+        log.trace("delete transaction");
+        transactionService.delete(transaction);
     }
 }

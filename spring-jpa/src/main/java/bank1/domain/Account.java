@@ -11,6 +11,8 @@ public class Account {
 
     private long accountNumber;
 
+    private long accountBalance;
+
     public Account() {
 
     }
@@ -30,8 +32,6 @@ public class Account {
     public void setAccountBalance(long accountBalance) {
         this.accountBalance = accountBalance;
     }
-
-    private long accountBalance;
 
     public void setId(Long id) {
         this.id = id;

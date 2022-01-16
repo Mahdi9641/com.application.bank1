@@ -3,6 +3,8 @@ package bank1.model;
 import java.util.StringJoiner;
 
 public class Account {
+
+    private int id;
     private long accountNumber;
     private long accountBalance;
 
@@ -11,12 +13,12 @@ public class Account {
         this.accountBalance = accountBalance;
     }
 
-    @Override
-    public String toString() {
-        return new StringJoiner(", ", Account.class.getSimpleName() + "[", "]")
-                .add("accountNumber=" + accountNumber)
-                .add("accountBalance=" + accountBalance)
-                .toString();
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public long getAccountNumber() {
@@ -33,5 +35,13 @@ public class Account {
 
     public void setAccountBalance(long accountBalance) {
         this.accountBalance = accountBalance;
+    }
+
+    @Override
+    public String toString() {
+        return new StringJoiner(", ", Account.class.getSimpleName() + "[", "]")
+                .add("accountNumber=" + accountNumber)
+                .add("accountBalance=" + accountBalance)
+                .toString();
     }
 }

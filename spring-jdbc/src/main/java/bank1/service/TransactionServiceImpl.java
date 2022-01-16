@@ -19,4 +19,19 @@ public class TransactionServiceImpl implements TransactionService{
     public List<Transaction> findall() {
         return dao.findall();
     }
-}
+
+     @Override
+     public void insert(Transaction transaction) {
+         dao.insert(transaction);
+     }
+
+     @Override
+     public void update(Transaction transaction) {
+         dao.update(transaction);
+     }
+
+     @Override
+     public void delete(Transaction transaction) {
+    dao.delete(transaction);
+     }
+ }

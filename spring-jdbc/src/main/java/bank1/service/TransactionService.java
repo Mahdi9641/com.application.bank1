@@ -7,4 +7,11 @@ import java.util.List;
 public interface TransactionService {
 
     List<Transaction> findall();
+
+    void insert(Transaction transaction);
+
+    void update(Transaction transaction);
+
+    void delete(Transaction transaction);
+
 }

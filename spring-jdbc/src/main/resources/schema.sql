@@ -1,13 +1,13 @@
 CREATE TABLE transaction
 (
-    id     integer NOT NULL,
+    id SERIAL NOT NULL ,
     amount integer NOT NULL,
     primary key (id)
 );
 
 CREATE TABLE account
 (
-    id             integer NOT NULL,
+    id int NOT NULL,
     accountNumber  BIGINT     NOT NULL,
     accountBalance BIGINT     NOT NULL,
     primary key (id)

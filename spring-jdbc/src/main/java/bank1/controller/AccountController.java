@@ -19,7 +19,7 @@ public class AccountController {
         this.accountService = accountService;
 }
 
-    @GetMapping("/account")
+    @GetMapping("/getAccount")
     public Account getAccount() {
         Account returnValue = new Account(2, 50);
         returnValue = new Account(1, 1000000);
@@ -27,10 +27,25 @@ public class AccountController {
         return returnValue;
 
     }
-    @PostMapping("/account")
+    @PostMapping("/createAccount")
     public void createdaccount(@RequestBody Account account) {
-        log.info("created account accountNumber and accountBalance ");
-
+        log.trace("created account accountNumber and accountBalance ");
+    accountService.insert(account);
     }
+
+    @PutMapping("/updateAccount")
+    public void updateAccount(@RequestBody Account account){
+        log.trace("update account accountNumber and accountBalance ");
+        accountService.update(account);
+    }
+
+    @DeleteMapping("/deleteAccount")
+    public void deleteAccount(@RequestBody Account account){
+        log.trace("update account accountNumber and accountBalance ");
+    accountService.delete(account);
+    }
+
+
+
 
 }
