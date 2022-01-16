@@ -34,11 +34,12 @@ public class AccountDaoImpl implements Dao<Account> {
 
     @Override
     public void insert(Account account) {
-        String sql = "insert into account(accountNumber , accountBalance) values (:accountNumber , :accountBalance)";
+        String sql = "insert into account(id , accountNumber , accountBalance) values (:id , :accountNumber , :accountBalance)";
 
         KeyHolder holder = new GeneratedKeyHolder();
 
         SqlParameterSource param = new MapSqlParameterSource()
+                .addValue("id" , account.getId())
                 .addValue("accountNumber", account.getAccountNumber())
                 .addValue("accountBalance", account.getAccountBalance());
 
@@ -51,8 +52,9 @@ public class AccountDaoImpl implements Dao<Account> {
         String sql = "update account set accountNumber=:accountNumber ,  accountBalance=:accountBalance  where id = :id";
 
         Map<String, Object> map = new HashMap<>();
-        map.put("id", account.getAccountNumber());
-        map.put("amount", account.getAccountBalance());
+        map.put("id" , account.getId());
+        map.put("accountNumber", account.getAccountNumber());
+        map.put("accountBalance", account.getAccountBalance());
 
         tempelate.execute(sql, map, new PreparedStatementCallback<Object>() {
 

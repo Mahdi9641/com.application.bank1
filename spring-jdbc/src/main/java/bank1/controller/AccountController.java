@@ -27,7 +27,7 @@ public class AccountController {
         return returnValue;
 
     }
-    @PostMapping("/createAccount")
+    @PostMapping("/creataccount")
     public void createdaccount(@RequestBody Account account) {
         log.trace("created account accountNumber and accountBalance ");
     accountService.insert(account);
@@ -39,7 +39,7 @@ public class AccountController {
         accountService.update(account);
     }
 
-    @DeleteMapping("/deleteAccount")
+    @DeleteMapping("/deleteaccount")
     public void deleteAccount(@RequestBody Account account){
         log.trace("update account accountNumber and accountBalance ");
     accountService.delete(account);
